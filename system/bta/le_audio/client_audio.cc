@@ -129,7 +129,7 @@ bool LeAudioClientAudioSource::InitAudioSinkThread(const std::string name) {
   /* Schedule the rest of the operations */
   if (!worker_thread_->EnableRealTimeScheduling()) {
 #if defined(OS_ANDROID)
-    LOG(FATAL) << __func__ << ", Failed to increase media thread priority";
+    LOG(ERROR) << __func__ << ", Failed to increase media thread priority";
 #endif
   }
 
